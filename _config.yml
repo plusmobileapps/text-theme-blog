@@ -102,19 +102,19 @@ sharing:
 ## => Comments
 ##############################
 comments:
-  provider: disqus # false (default), "disqus", "gitalk", "valine", "custom"
-  disqus:
-    shortname: plusmobileapps # the Disqus shortname for the site
+  provider: gittalk # false (default), "disqus", "gitalk", "valine", "custom"
+  # disqus:
+    # shortname: plusmobileapps # the Disqus shortname for the site
 
   ## Gitalk
   # please refer to https://github.com/gitalk/gitalk for more info.
-  # gitalk:
-  #   clientID    : # GitHub Application Client ID
-  #   clientSecret: # GitHub Application Client Secret
-  #   repository  : # GitHub repo
-  #   owner       : # GitHub repo owner
-  #   admin: # GitHub repo owner and collaborators, only these guys can initialize GitHub issues, IT IS A LIST.
-  #     # - your GitHub Id
+  gitalk:
+    clientID    : 40657ce05b8b469073f3 # GitHub Application Client ID
+    clientSecret: 127e5646b8045c8963077f966c4b9c8bb88b7956 # GitHub Application Client Secret
+    repository  : text-theme-blog # GitHub repo
+    owner       : plusmobileapps # GitHub repo owner
+    admin: # GitHub repo owner and collaborators, only these guys can initialize GitHub issues, IT IS A LIST.
+      - plusmobileapps
 
   # ## Valine
   # # please refer to https://valine.js.org/en/ for more info.
