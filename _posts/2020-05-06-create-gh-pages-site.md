@@ -1,3 +1,9 @@
+---
+title: Create a Website with Github Pages
+tags: Github Pages MkDocs
+key: gh-pages-mkdocs
+---
+
 # Create a Website with Github Pages
 
 If you have a project, blog, or documentation that you need to have hosted in a site, [Github Pages](https://pages.github.com/) can be a great way to host your site for free straight from the repository. 
