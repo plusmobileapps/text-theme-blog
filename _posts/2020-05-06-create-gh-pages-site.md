@@ -1,5 +1,11 @@
 ---
+<<<<<<< HEAD
 key: github-pages
+=======
+title: Create a Website with Github Pages
+tags: Github Pages MkDocs
+key: gh-pages-mkdocs
+>>>>>>> master
 ---
 
 # Create a Website with Github Pages

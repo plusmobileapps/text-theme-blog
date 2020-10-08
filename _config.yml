@@ -102,12 +102,7 @@ sharing:
 ## => Comments
 ##############################
 comments:
-  provider: gittalk # false (default), "disqus", "gitalk", "valine", "custom"
-  # disqus:
-    # shortname: plusmobileapps # the Disqus shortname for the site
-
-  ## Gitalk
-  # please refer to https://github.com/gitalk/gitalk for more info.
+  provider: gitalk # false (default), "disqus", "gitalk", "valine", "custom"
   gitalk:
     clientID    : 40657ce05b8b469073f3 # GitHub Application Client ID
     clientSecret: 127e5646b8045c8963077f966c4b9c8bb88b7956 # GitHub Application Client Secret
@@ -115,16 +110,6 @@ comments:
     owner       : plusmobileapps # GitHub repo owner
     admin: # GitHub repo owner and collaborators, only these guys can initialize GitHub issues, IT IS A LIST.
       - plusmobileapps
-
-  # ## Valine
-  # # please refer to https://valine.js.org/en/ for more info.
-  # valine:
-  #   app_id      : # LeanCloud App id
-  #   app_key     : # LeanCloud App key
-  #   placeholder : # Prompt information
-  #   visitor     : # false (default)
-  #   meta        : # "[nick, mail, link]" (default) nickname, E-mail, Personal-site
-
 
 ## => Pageview
 ##############################
