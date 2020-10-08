@@ -21,11 +21,11 @@ author:
   type      : # "person" (default), "organization"
   name      : Andrew Steinmetz
   url       : https://plusmobileapps.com
-  avatar    : assets/profile.jpg # path or url of avatar image (square)
+  avatar    : /assets/profile.jpg # path or url of avatar image (square)
   bio       : I am an amazing person.
   email     : andrew@plusmobileapps
   facebook  : # "user_name" the last part of your profile url, e.g. https://www.facebook.com/user_name
-  twitter   : https://twitter.com/plusmobileapps # "user_name" the last part of your profile url, e.g. https://twitter.com/user_name
+  twitter   : https://twitter.com/PlusMobileApps # "user_name" the last part of your profile url, e.g. https://twitter.com/user_name
   weibo     : # "user_id"   the last part of your profile url, e.g. https://www.weibo.com/user_id/profile?...
   googleplus: # "user_id"   the last part of your profile url, e.g. https://plus.google.com/u/0/user_id
   telegram  : # "user_name" the last part of your profile url, e.g. https://t.me/user_name
@@ -106,7 +106,7 @@ comments:
   gitalk:
     clientID    : 40657ce05b8b469073f3 # GitHub Application Client ID
     clientSecret: 127e5646b8045c8963077f966c4b9c8bb88b7956 # GitHub Application Client Secret
-    repository  : text-theme-blog # GitHub repo
+    repository  : plusmobileapps.github.io # GitHub repo
     owner       : plusmobileapps # GitHub repo owner
     admin: # GitHub repo owner and collaborators, only these guys can initialize GitHub issues, IT IS A LIST.
       - plusmobileapps
