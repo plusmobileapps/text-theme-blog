@@ -1,10 +1,10 @@
 ---
-title: How to build Slackbot with Kotlin
+title: How to build a Slackbot with Kotlin
 tags: Kotlin Slack Ktor
 key: kotlin-slack-bot
 ---
 
-One day at my day job, I noticed that there were a couple of services we used that anytime an event happened there was a very manual process for the developer to copy paste data into a Slack channel for others to be aware of the issue. I thought there had to be a better way to automate this whole process and prevent a developer from having to do this tedious task. That was when I came up with the idea of creating a Slackbot application to do this exact task. So in this article I will describe the process I went through to create a Slackbot using Ktor and webhooks that can post messages to your Slack channel of choice. For this example, we will be using [Github webhooks](https://docs.github.com/en/free-pro-team@latest/developers/webhooks-and-events/about-webhooks) to supply data to our Slackbot but the same principal applies to your service of choice that offers webhooks. 
+One day at my day job, I noticed that there were a couple of services we used that anytime an event happened there was a very manual process for the developer to copy paste data into a Slack channel for others to be aware of the issue. I thought there had to be a better way to automate this whole process and prevent a developer from having to do this tedious task. That was when I came up with the idea of creating a Slackbot application to do this. So in this article I will describe the process I went through to create a Slackbot using Ktor and webhooks that can post messages to your Slack channel of choice and how to deploy to Heroku. For this example, we will be using [Github webhooks](https://docs.github.com/en/free-pro-team@latest/developers/webhooks-and-events/about-webhooks) to supply data to our Slackbot but the same principal applies to your service of choice that offers webhooks. 
 
 ## Setup 
 
@@ -41,7 +41,7 @@ At the top of this page, you should now be able to install this bot to your work
 
 ![](/assets/images/install-slack-bot.png)
 
-Now that you have installed the bot to the workspace, it should land you back on OAuth and Permissions page with a token that we will use later to authenticate with our Slack instance to post messages. This key should be kept private and not checked into any repository which we will discuss how to keep this secret. 
+Now that you have installed the bot to the workspace, it should land you back on OAuth and Permissions page with a token that we will use later to authenticate with our Slack instance to post messages. This key should be kept private and not checked into any repository which we will discuss in a bit how to keep this secret. 
 
 ![](/assets/images/slack-bot-token.png)
 
@@ -151,7 +151,7 @@ Next, there is a special file we will make in the root of our project called [`P
 web: java -jar ./build/libs/slackbot-0.0.1.jar
 ```
 
-To [run Heroku locally](https://devcenter.heroku.com/articles/heroku-local), create a `.env` file in the root of the project folder where we will need to specify the `SLACK_TOKEN` and `PORT` variables. Don't forget to add the `.env` file to your `.gitignore` file to avoid checking in your secrets to your version control.  
+To [run Heroku locally](https://devcenter.heroku.com/articles/heroku-local), create a `.env` file in the root of the project folder where we will specify the `SLACK_TOKEN` and `PORT` variables. Don't forget to add the `.env` file to your `.gitignore` file to avoid checking in your secrets to your version control.  
 
 ```
 SLACK_TOKEN=your-token-here
