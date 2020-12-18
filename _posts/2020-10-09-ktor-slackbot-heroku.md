@@ -1,7 +1,17 @@
 ---
+layout: article
 title: How to build a Slackbot with Kotlin
 tags: Kotlin Slack Ktor
 key: kotlin-slack-bot
+
+cover: /assets/images/kotlin.png
+article_header:
+  type: overlay
+  theme: dark
+  background_color: '#203028'
+  background_image:
+    gradient: 'linear-gradient(135deg, rgba(34, 139, 87 , .4), rgba(139, 34, 139, .4))'
+    src: /assets/images/kotlin.png
 ---
 
 One day at my day job, I noticed that there were a couple of services we used that anytime an event happened there was a very manual process for the developer to copy paste data into a Slack channel for others to be aware of the issue. I thought there had to be a better way to automate this whole process and prevent a developer from having to do this tedious task. That was when I came up with the idea of creating a Slackbot application to do this. So in this article I will describe the process I went through to create a Slackbot using Ktor and webhooks that can post messages to your Slack channel of choice and how to deploy to Heroku. For this example, we will be using [Github webhooks](https://docs.github.com/en/free-pro-team@latest/developers/webhooks-and-events/about-webhooks) to supply data to our Slackbot but the same principal applies to your service of choice that offers webhooks. 
