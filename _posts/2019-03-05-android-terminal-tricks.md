@@ -4,6 +4,10 @@ tags: Android Bash
 key: android-bash-terminal-tricks
 ---
 
+![](/assets/images/android-adb.jpg)
+
+<!--more-->
+
 ## Android Debug Bridge (ADB)
 
 Before you can do anything in your bash terminal with Android, you must install the [Android Debug Bridget(ADB)](https://developer.android.com/studio/command-line/adb). This is a set of command line tools that help you interface with Android devices

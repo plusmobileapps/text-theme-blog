@@ -8,6 +8,8 @@ One aspect of a programmer's work that I think can get overlooked is the actual 
 
 ![This is the way](/assets/images/this-is-the-way.gif)
 
+<!--more-->
+
 and you shouldn't get anything else. But I do recommend that you invest in the similar items for each section listed to help create your own environment that will help you make yourself more productive.  
 
 ## Desk

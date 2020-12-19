@@ -4,6 +4,12 @@ tags: Bash Developer-Environment
 key: mac-dev-environment
 ---
 
+![](/assets/images/my-mac-environment.png)
+
+A list of all the different programs, packages, and tips for how I configure my Mac for development. 
+
+<!--more-->
+
 ## Installed From Terminal
 
 [Home Brew](https://brew.sh/) - helps you install packages from the command line more easily similar to linux's package manager
