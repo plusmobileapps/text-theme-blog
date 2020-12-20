@@ -4,6 +4,10 @@ tags: Personal-Development
 key: avoiding-analysis-paralysis
 ---
 
+![](/assets/images/analysis-paralysis.jpg)
+
+<!--more-->
+
 I joined the professional world of developing in the year of 2018 and ever since I started I had aspirations of creating a blog to share the ideas and concepts I have learned with others. Some of the features I was looking for to make this blog that could provide a good user experience were the following: 
 
 * Accessible to everyone 

@@ -8,6 +8,8 @@ key: shell-scripts
 
 If you find yourself running a bunch of bash commands that you would like to version control and share with others, shell script is what you are looking for. 
 
+<!--more-->
+
 ## What is a Shell Script?
 
 Shell scripts are an executable file that contain bash commands to *execute*. The file extension of shell scripts are `.sh` and are ran by putting a `./` in front of the file name. Putting this all together in an example: 

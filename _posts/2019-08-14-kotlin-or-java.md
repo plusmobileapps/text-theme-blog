@@ -2,17 +2,23 @@
 title: Should I Write an Android App in Kotlin or Java?
 tags: Android Kotlin Java
 key: kotlin-or-java
+
+cover: /assets/images/kotlin-vs-java.png
+article_header:
+  type: overlay
+  theme: dark
+  background_color: '#203028'
+  background_image:
+    gradient: 'linear-gradient(135deg, rgba(34, 139, 87 , .4), rgba(139, 34, 139, .4))'
+    src: /assets/images/kotlin-vs-java.png
 ---
 
-## TLDR
-
-Kotlin is a modern programming language that will help you be more productive in writing more expressive code, but knowing Java will help you better understand what the Kotlin compiler is targeting. 
-
-## Introduction
 
 In the world of native Android developing, the developer has the option to write an app in either [Java](https://www.java.com/en/) or [Kotlin](https://kotlinlang.org/). If you actually clicked on those two links, you might even be able to tell a lot about each language from first glance. Java has been around since 1995 which also seems like the last year the website may have been touched. Kotlin first appeared in 2011 with aspirations to becoming a modern language beloved by many developers and has a website to show for that. Android was born in 2008, so the original way to write Android apps between the two languages was Java. Kotlin did not receive official first class support for Android until [Google IO in 2017](https://blog.jetbrains.com/kotlin/2017/05/kotlin-on-android-now-official/) and has become a very popular way to build Android apps. 
 
 Now when it comes to writing an Android app, I would say it really depends on an individuals background, team size, and teams background to know which language to learn. 
+
+<!--more-->
 
 ## Java
 

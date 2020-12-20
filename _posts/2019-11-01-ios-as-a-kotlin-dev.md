@@ -6,6 +6,8 @@ key: learning-io-as-a-kotlin-dev
 
 I would consider myself a professional Kotlin developer during the day, and this is just a collection of some notes I have taken away from the little I learned about iOS when I tried to implement an iOS app called [Koddit](https://github.com/plusmobileapps/koddit) with Kotlin Multiplatform. 
 
+<!--more-->
+
 ## Immutability and Mutability
 
 * **Immutable** - the value assigned to a variable is constant and cannot be changed or *mutated*

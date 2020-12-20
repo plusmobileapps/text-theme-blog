@@ -4,9 +4,14 @@ tags: Android Location
 key: android-location-basics
 ---
 
+![](/assets/images/android-location.jpg)
+
+Sample app that will demonstrate the basics in retrieving a user's location and requesting permission at runtime on Android.
+
+<!--more-->
+
 [Sample Android App GitHub Repository](https://github.com/plusmobileapps/location-android)
 
-Sample app that will demonstrate the basics in retrieving a user's location and requesting permission at runtime. 
 
 ## Setup Google Play Services In Android Studio
 
