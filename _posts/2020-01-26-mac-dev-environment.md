@@ -69,7 +69,7 @@ rm -rf fonts
 
 ## Bash Profile
 
-Since I use [Oh My ZShell](https://github.com/robbyrussell/oh-my-zsh), my bash profile is sourced from `.zshrc` file in my home directory as opposed to `.bash_profile`. My bash profile consists of a bunch of git aliases and helper functions for dealing with the Android SDK. For some Android specific bash profile functions & aliases, check out [Android Bash Profile and Terminal Tricks](/../android/bash-profile/)
+Since I use [Oh My ZShell](https://github.com/robbyrussell/oh-my-zsh), my bash profile is sourced from `.zshrc` file in my home directory as opposed to `.bash_profile`. My bash profile consists of a bunch of git aliases and helper functions for dealing with the Android SDK. For some Android specific bash profile functions & aliases, check out [Android Bash Profile and Terminal Tricks](https://plusmobileapps.com/2019/03/05/android-terminal-tricks.html)
 
 ```bash
 alias edit_profile='code ~/.zshrc'
