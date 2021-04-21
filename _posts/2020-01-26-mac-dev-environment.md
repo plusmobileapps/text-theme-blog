@@ -75,6 +75,12 @@ Since I use [Oh My ZShell](https://github.com/robbyrussell/oh-my-zsh), my bash p
 alias edit_profile='code ~/.zshrc'
 alias source_profile='source ~/.zshrc'
 
+alias gs='git status'
+
+# remove the user name and machine from the start of the terminal prompt
+# should only readout the current file name. 
+export DEFAULT_USER="$(whoami)"
+
 # when ran from the root of a git repo, will take an argument for the branch name
 # will then check if your current work station is clean, if not you can type "stash" to stash them
 # or will do nothing and not checkout the branch
