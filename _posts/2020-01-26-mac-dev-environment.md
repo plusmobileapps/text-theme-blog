@@ -76,6 +76,9 @@ alias edit_profile='code ~/.zshrc'
 alias source_profile='source ~/.zshrc'
 
 alias gs='git status'
+alias branches='git branch | cat'
+alias rbranches='git branch -r | cat'
+alias gamend='git commit --amend'
 
 # remove the user name and machine from the start of the terminal prompt
 # should only readout the current file name. 
