@@ -16,7 +16,7 @@ Before you can do anything in your bash terminal with Android, you must install 
 
 To install ADB on Mac, Windows, or Linux. XDA has some pretty good instructions on how to do so in the following [post](https://www.xda-developers.com/install-adb-windows-macos-linux/). 
 
-Since I am on a Mac you can utilize [Homebrew](https://brew.sh/) to install ADB with the simple command `brew install adb` which will allow you to use the ADB command from the terminal. 
+Since I am on a Mac you can utilize [Homebrew](https://brew.sh/) to install ADB with the simple command `brew install android-platform-tools` which will allow you to use the ADB command from the terminal. 
 
 ## Bash Profile 
 
@@ -77,18 +77,16 @@ screen_record(){
   echo "$name was removed from the device"
 }
 
-#     open an android application
-#     open_android name_of_file_location
-open_android() {
-  if [ $# -eq 0 ]
-  then
-    open -a /Applications/Android\ Studio.app
-    echo "Android Studio opened!"
-  else
-    open -a /Applications/Android\ Studio.app $1
-    echo "$1 was opened in Android Studio!"
-    cd $1
-  fi
+enable_animations() {
+  adb shell settings put global window_animation_scale 1
+  adb shell settings put global transition_animation_scale 1
+  adb shell settings put global animator_duration_scale 1
+}
+
+disable_animations() {
+  adb shell settings put global window_animation_scale 0
+  adb shell settings put global transition_animation_scale 0
+  adb shell settings put global animator_duration_scale 0
 }
 ```
 
