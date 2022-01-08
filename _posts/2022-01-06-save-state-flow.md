@@ -100,27 +100,41 @@ Since `SavedStateFlow` is a wrapper around `SavedStateHandle`, the following not
 
 In the sample above, there was an extension function on `SavedStateHandle` to get an instance of a `SavedStateFlowHandle`. Some of you might be wondering how one actually injects that into a `ViewModel`. Well if you're doing manual injection, this is pretty simple using the `AbstractSavedStateViewModelFactory` and there is a sample of this in the [documentation](https://plusmobileapps.com/SavedStateFlow/manual-di/). 
 
-However, what if you were using a dependency injection framework like [Hilt](https://developer.android.com/training/dependency-injection/hilt-android) which can provide an instance of `SavedStateHandle` to any `@HiltViewModel` out of the box. Thankfully this is really simple to do by registering an instance of `SavedStateFlowHandle` to the [ViewModel scope](https://dagger.dev/hilt/view-model.html).
+However, where this library really shines in the developer experience is when you are using [Hilt](https://developer.android.com/training/dependency-injection/hilt-android) because there is a separate [artifact](https://plusmobileapps.com/SavedStateFlow/setup/#savedstateflow-hilt) which can automatically scope a `SavedStateFlowHandle` to any `@HiltViewModel`. 
 
 ```kotlin
-@InstallIn(ViewModelComponent::class)
-@Module
-object SavedStateFlowHandleModule {
-
-    @Provides
-    @ViewModelScoped
-    fun providesSavedStateFlowHandle(savedStateHandle: SavedStateHandle): SavedStateFlowHandle =
-        savedStateHandle.toSavedStateFlowHandle()
-
-}
-
 @HiltViewModel
 class MainViewModel @Inject constructor(
     savedStateFlowHandle: SavedStateFlowHandle
 ) : ViewModel()
 ```
 
-Now any Hilt `ViewModel` can be injected with a `SavedStateFlowHandle`! For more information please check out the [documentation](https://plusmobileapps.com/SavedStateFlow/hilt-di/).
+However, not every `ViewModel` can be annotated with `@HiltViewModel` when values passed through the constructor are determined at runtime which is when assisted injection can be used. In this scenario, there are a few extension methods provided which can provide a `SavedStateFlowHandle` when using assisted injection. 
+
+```kotlin
+class MyAssistedViewModel @AssistedInject constructor(
+    @Assisted savedStateFlowHandle: SavedStateFlowHandle,
+    @Assisted id: String
+) : ViewModel() {
+
+    @AssistedFactory
+    interface Factory {
+        fun create(savedStateFlowHandle: SavedStateFlowHandle, id: String): MyAssistedViewModel
+    }
+}
+
+@AndroidEntryPoint
+class AssistedFragment : Fragment() {
+    @Inject
+    lateinit var factory: MyAssistedViewModel.Factory
+
+    private val viewModel: MyAssistedViewModel by assistedViewModel { savedStateFlowHandle ->
+        factory.create(savedStateFlowHandle, arguments?.getString("some-argument-key")!!)
+    }
+}
+```
+
+For more information on the `SavedStateFlow` Hilt integration, please check out the [documentation](https://plusmobileapps.com/SavedStateFlow/hilt-di/).
 
 ## Testing
 
